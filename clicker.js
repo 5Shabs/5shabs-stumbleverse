@@ -1,34 +1,53 @@
 let score = localStorage.getItem("clickerScore") ? parseInt(localStorage.getItem("clickerScore")) : 0;
 let timeLeft = 10;
-let timer;
+let timerActive = false;
 
 const scoreDisplay = document.getElementById("score");
 const timeDisplay = document.getElementById("time");
 const clickButton = document.getElementById("clicker-btn");
+const resetButton = document.getElementById("reset-btn");
 
-// Set the initial score from storage
+// Set initial values
 scoreDisplay.textContent = score;
+timeDisplay.textContent = timeLeft;
 
 // Function to start the countdown timer
 function startTimer() {
-    timer = setInterval(() => {
+    if (timerActive) return; // Prevent multiple timers
+    timerActive = true;
+
+    let countdown = setInterval(() => {
         timeLeft--;
         timeDisplay.textContent = timeLeft;
 
-        if (timeLeft === 0) {
-            clearInterval(timer);
+        if (timeLeft <= 0) {
+            clearInterval(countdown);
             clickButton.disabled = true;
             alert("Time's up! Your final score: " + score);
         }
     }, 1000);
 }
 
-// Start the game when the button is clicked for the first time
+// Start the game when clicking the button
 clickButton.addEventListener("click", () => {
-    if (timeLeft === 10) {
+    if (!timerActive) {
         startTimer();
     }
-    score++;
+    if (timeLeft > 0) {
+        score++;
+        scoreDisplay.textContent = score;
+        localStorage.setItem("clickerScore", score);
+    }
+});
+
+// Reset button logic
+resetButton.addEventListener("click", () => {
+    score = 0;
+    timeLeft = 10;
+    timerActive = false;
+
     scoreDisplay.textContent = score;
-    localStorage.setItem("clickerScore", score); // Save score in LocalStorage
+    timeDisplay.textContent = timeLeft;
+    clickButton.disabled = false;
+    localStorage.setItem("clickerScore", score);
 });
