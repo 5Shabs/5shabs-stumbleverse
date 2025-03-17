@@ -71,3 +71,8 @@ h1 {
 .browse-btn:hover {
     background: #00bfff;
 }
+/* Fade-in effect on load */
+.container {
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
