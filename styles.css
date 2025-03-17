@@ -76,3 +76,19 @@ h1 {
     opacity: 0;
     transition: opacity 1.5s ease-in-out;
 }
+/* Animated dark purple gradient background */
+body {
+    background: linear-gradient(-45deg, #300060, #5a0099, #3b007d, #200040);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Gradient animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
