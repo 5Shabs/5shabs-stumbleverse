@@ -1,0 +1,197 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #121212, #2e2e2e);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    width: 67.5%; /* Scaled down from 90% */
+    max-width: 375px; /* Scaled down from 500px */
+    padding: 15px; /* Scaled down from 20px */
+    border-radius: 9px; /* Scaled down from 12px */
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Scaled down from 20px */
+}
+
+/* Header and Instructions */
+h1 {
+    font-size: 1.5rem; /* Scaled down from 2rem */
+    background: -webkit-linear-gradient(45deg, #ff7e00, #ffcd00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+}
+
+p {
+    font-size: 0.75rem; /* Scaled down from 1rem */
+    color: #e0e0e0;
+}
+
+/* User Info - Top Left */
+.user-info {
+    position: absolute;
+    top: 7.5px; /* Scaled down from 10px */
+    left: 15px; /* Scaled down from 20px */
+    background: rgba(255, 255, 255, 0.2);
+    padding: 6px 12px; /* Scaled down from 8px 16px */
+    border-radius: 15px; /* Scaled down from 20px */
+    font-size: 0.675rem; /* Scaled down from 0.9rem */
+    font-weight: bold;
+    color: #ffcd00;
+    text-shadow: 0px 0px 3.75px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 7.5px rgba(255, 255, 255, 0.2);
+}
+
+/* Gem Currency - Top Right */
+.gem-currency {
+    position: absolute;
+    top: 7.5px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    gap: 7.5px; /* Scaled down from 10px */
+    background: rgba(255, 255, 255, 0.2);
+    padding: 6px 12px;
+    border-radius: 15px;
+    box-shadow: 0 0 7.5px rgba(255, 255, 255, 0.2);
+}
+
+.gem-currency img {
+    width: 15px; /* Scaled down from 20px */
+    height: 15px;
+}
+
+.gem-amount {
+    font-size: 0.75rem; /* Scaled down from 1rem */
+    font-weight: bold;
+    color: #ffcd00;
+    text-shadow: 0px 0px 3.75px rgba(0, 0, 0, 0.5);
+}
+
+/* Score, Timer, and Gem Display */
+#score,
+#timer,
+#gemDisplay {
+    font-size: 0.9rem; /* Scaled down from 1.2rem */
+    font-weight: bold;
+    color: #ffcd00;
+    margin: 0;
+    padding: 3.75px 7.5px; /* Scaled down from 5px 10px */
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 6px; /* Scaled down from 8px */
+}
+
+/* Game Board */
+.game-board {
+    width: 100%;
+    height: 225px; /* Scaled down from 300px */
+    border: 1.5px solid #fff; /* Scaled down from 2px */
+    border-radius: 9px; /* Scaled down from 12px */
+    background: rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ronaldo Skins */
+.ronaldo-skin {
+    width: 37.5px; /* Scaled down from 50px */
+    height: 37.5px;
+    background-image: url('../../assets/ronaldo.png'); /* Update path if needed */
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+}
+
+.ronaldo-skin:hover {
+    transform: scale(1.2);
+}
+
+/* Buttons */
+button {
+    font-size: 0.75rem; /* Scaled down from 1rem */
+    padding: 7.5px 15px; /* Scaled down from 10px 20px */
+    border: none;
+    border-radius: 6px; /* Scaled down from 8px */
+    cursor: pointer;
+    background: #4caf50;
+    color: #fff;
+    box-shadow: 0 3.75px 7.5px rgba(0, 0, 0, 0.3); /* Adjusted shadow */
+    transition: transform 0.2s, background 0.3s;
+    margin: 3.75px auto; /* Adjusted button spacing */
+    display: block;
+}
+
+button:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 1.5px 3.75px rgba(0, 0, 0, 0.4);
+}
+
+/* Activities Hub Button */
+.return-activities a {
+    display: inline-block;
+    font-size: 0.675rem; /* Scaled down from 0.9rem */
+    padding: 7.5px 11.25px; /* Scaled down from 10px 15px */
+    text-decoration: none;
+    color: #ff7e00;
+    font-weight: bold;
+    border: 0.75px solid #ff7e00; /* Adjusted border size */
+    border-radius: 6px;
+    transition: background 0.3s ease, color 0.3s ease;
+    margin-top: 7.5px; /* Adjusted margin */
+}
+
+.return-activities a:hover {
+    background: #ff7e00;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        max-width: 67.5%; /* Scaled down from 90% */
+        padding: 11.25px; /* Scaled down from 15px */
+    }
+
+    h1 {
+        font-size: 1.125rem; /* Scaled down from 1.5rem */
+    }
+
+    p {
+        font-size: 0.675rem; /* Scaled down from 0.9rem */
+    }
+
+    #score,
+    #timer,
+    #gemDisplay {
+        font-size: 0.75rem; /* Scaled down from 1rem */
+    }
+
+    .game-board {
+        height: 187.5px; /* Scaled down from 250px */
+    }
+
+    button {
+        font-size: 0.675rem; /* Scaled down from 0.9rem */
+        padding: 6px 11.25px; /* Scaled down from 8px 15px */
+    }
+}

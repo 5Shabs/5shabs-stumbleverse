@@ -1,0 +1,243 @@
+/* General Page Styles */
+body {
+    background: linear-gradient(-45deg, #1a0033, #35006a, #2a0052, #450080);
+    background-size: 400% 400%;
+    animation: gradientMove 8s infinite ease-in-out;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+/* Gradient Animation */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Title Styles */
+h1 {
+    margin-top: 20px; /* Add spacing from the top */
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 30px; /* Add space below the title */
+}
+
+/* Casino Container */
+.casino-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equally spaced cards per row */
+    gap: 20px;
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+/* Casino Card Styles */
+.casino-card {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease, background 0.3s ease;
+    text-align: center;
+}
+
+.casino-card:hover {
+    transform: translateY(-5px);
+    background: #6a00b9;
+}
+
+/* Casino Card Heading */
+.casino-card h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* Casino Card Description */
+.casino-card p {
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .casino-container {
+        grid-template-columns: 1fr; /* Switch to one column on small screens */
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .casino-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .casino-card p {
+        font-size: 0.9rem;
+    }
+}
+/* General Page Styles */
+body {
+    background: linear-gradient(-45deg, #1a0033, #35006a, #2a0052, #450080);
+    background-size: 400% 400%;
+    animation: gradientMove 8s infinite ease-in-out;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+/* Gradient Animation */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Title Styles */
+h1 {
+    margin-top: 20px; /* Add spacing from the top */
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 30px; /* Add space below the title */
+}
+
+/* Casino Container */
+.casino-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equally spaced cards per row */
+    gap: 20px;
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+/* Casino Card Styles */
+.casino-card {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease, background 0.3s ease;
+    text-align: center;
+}
+
+.casino-card:hover {
+    transform: translateY(-5px);
+    background: #6a00b9;
+}
+
+/* Casino Card Heading */
+.casino-card h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* Casino Card Description */
+.casino-card p {
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .casino-container {
+        grid-template-columns: 1fr; /* Switch to one column on small screens */
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .casino-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .casino-card p {
+        font-size: 0.9rem;
+    }
+}
+/* User Info (Top Left) */
+.user-info {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 8px 16px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Gem Currency Display (Top Right) */
+.gem-currency {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 8px 16px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.gem-currency img {
+    width: 25px;
+    height: 25px;
+}
+
+.gem-currency #gemAmount {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffdd44;
+}
+
+/* Return Home Button */
+.return-home {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.return-home a {
+    text-decoration: none;
+    background: #6a00b9;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.return-home a:hover {
+    background: #8a00e6;
+    transform: translateY(-3px);
+}

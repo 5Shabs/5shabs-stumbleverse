@@ -1,0 +1,157 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background with animated gradient */
+body {
+    background: linear-gradient(-45deg, #2a0052, #450080, #35006a, #1a0033);
+    background-size: 400% 400%;
+    animation: gradientMove 8s infinite ease-in-out;
+    color: white;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Gradient Animation */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Title */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+/* Social Media Buttons */
+.social-media-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.social-media-buttons a img {
+    width: 62px;  /* Increased from 50px */
+    height: 62px; /* Increased from 50px */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover effect */
+.social-media-buttons a img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.3);
+}
+
+
+/* Hover effect */
+.social-media-buttons a img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.3);
+}
+
+/* Buttons Styling */
+.browse-activities,
+.casino-button {
+    margin-top: 15px;
+}
+
+.browse-activities a,
+.casino-button a {
+    display: inline-block;
+    text-decoration: none;
+    background: #6a00b9;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect */
+.browse-activities a:hover,
+.casino-button a:hover {
+    background: #8a00e6;
+    transform: translateY(-3px);
+}
+
+/* --- TOP LEFT: Sign In/Sign Up --- */
+.auth-buttons {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.auth-buttons a {
+    text-decoration: none;
+    background: #6a00b9;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.auth-buttons a:hover {
+    background: #8a00e6;
+    transform: translateY(-3px);
+}
+
+/* --- TOP RIGHT: Gem Currency Display --- */
+.gem-currency {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 6px 12px;
+    border-radius: 10px;
+}
+
+.gem-currency img {
+    width: 25px;
+    height: 25px;
+}
+
+.gem-amount {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffdd44;
+}

@@ -3,19 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Activities - 5shabs' StumbleVerse</title>
-    <link rel="stylesheet" href="../activities/activities.css">
+    <title>Activities Hub - 5shabs' StumbleVerse</title>
+    <link rel="stylesheet" href="activities.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Activities</h1>
-        <p class="slogan">Choose an activity and start playing!</p>
-        
-        <div class="activity-list">
-            <p>🚀 More activities coming soon...</p>
-        </div>
+    <!-- User Info / Nickname (If Signed In) -->
+    <div class="user-info" id="userInfo">Guest</div>
 
-        <a href="../index.html" class="back-btn">⬅ Back to Home</a>
+    <!-- Gem Currency Display -->
+    <div class="gem-currency">
+        <img src="../assets/Gem currency.png" alt="Gem Icon">
+        <div id="gemAmount">0</div>
     </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <header>
+            <h1>Activities Hub</h1>
+            <p>Play, have fun, and earn gems!</p>
+        </header>
+
+        <!-- Activities List -->
+        <div class="activities-list">
+            <a href="quick_click/quick_click.html" class="activity-card">
+                <h3>Quick Click ⚡</h3>
+                <p>Click as fast as you can!</p>
+            </a>
+            <!-- More activities can be added similarly -->
+        </div>
+        
+        <div class="return-home">
+            <a href="../index/index.html">Return to Home</a>
+        </div>
+    </div>
+
+    <!-- Link to Global Script -->
+    <script src="../global.js"></script>
+
+    <!-- Page-Specific Activities Script -->
+    <script src="activities.js"></script>
 </body>
 </html>

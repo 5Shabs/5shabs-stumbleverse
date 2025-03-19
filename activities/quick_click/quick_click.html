@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Click ⚡</title>
+    <link rel="stylesheet" href="quick_click.css">
+</head>
+<body>
+    <!-- User Info / Nickname (If Signed In) -->
+    <div class="user-info" id="userInfo">Guest</div>
+
+    <!-- Gem Currency Display -->
+    <div class="gem-currency">
+        <img src="../../assets/Gem currency.png" alt="Gem Icon">
+        <div id="gemAmount">0</div>
+    </div>
+
+    <!-- Main Game Container -->
+    <div class="container">
+        <h1>Quick Click ⚡</h1>
+        <p>Test your clicking skills!</p>
+
+        <!-- Game Display -->
+        <div id="score">Score: 0</div>
+        <div id="timer">Time Left: 15s</div>
+        <div id="gemDisplay">Gems Earned: 0</div>
+
+        <!-- Game Board -->
+        <div id="gameBoard" class="game-board"></div>
+
+        <!-- Buttons -->
+        <button id="startButton">Start Game</button>
+        <div class="return-activities">
+            <a href="../activities.html">Back to Activities Hub</a>
+        </div>
+    </div>
+
+    <!-- Link to Global Script -->
+    <script src="../../global.js"></script>
+
+    <!-- Link to Page-Specific JavaScript -->
+    <script src="quick_click.js"></script>
+</body>
+</html>
