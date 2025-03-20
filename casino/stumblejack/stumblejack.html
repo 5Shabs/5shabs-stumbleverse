@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StumbleJack ♠️</title>
+    <link rel="stylesheet" href="stumblejack.css">
+</head>
+<body>
+    <!-- Top Bar Section -->
+    <header class="top-bar">
+        <div class="user-info">
+            <span id="guestDisplay">Guest</span>
+        </div>
+        <div class="gem-display">
+            <img src="../../assets/Gem currency.png" alt="Gem Icon">
+            <span id="totalGems">0</span>
+        </div>
+    </header>
+
+    <!-- Header Section -->
+    <div class="header">
+        <img src="../../assets/stumble_jack.png" alt="Stumble Jack" class="stumble-jack-img">
+        <h1>StumbleJack ♠️</h1>
+        <p>Get 21 or as close as possible without going over!</p>
+    </div>
+
+    <!-- Main Game Section -->
+    <main class="game-container">
+        <!-- Place Bet Section -->
+        <div class="bet-section">
+            <label for="betAmount">Place your bet (Gems):</label>
+            <input type="number" id="betAmount" min="1" placeholder="Enter gems">
+            <button id="placeBetButton">Place Bet</button>
+        </div>
+
+        <!-- Blackjack Table -->
+        <div id="blackjackTable" class="blackjack-table">
+            <div id="dealerSection" class="dealer-section">
+                <h2>Dealer</h2>
+                <div id="dealerCards" class="card-container"></div>
+                <p id="dealerScore">Score: 0</p>
+            </div>
+
+            <div id="playerSection" class="player-section">
+                <h2>You</h2>
+                <div id="playerCards" class="card-container"></div>
+                <p id="playerScore">Score: 0</p>
+            </div>
+        </div>
+
+        <!-- Game Controls -->
+        <div class="controls">
+            <button id="hitButton" disabled>Hit</button>
+            <button id="standButton" disabled>Stand</button>
+            <button id="restartButton" style="display: none;">Restart</button>
+        </div>
+
+        <!-- Back to Casino Hub Button -->
+        <div class="back-button-container">
+            <a href="../casino.html" class="back-button">Back to Casino Hub</a>
+        </div>
+        
+        <!-- Game Status -->
+        <p id="gameStatus" class="game-status"></p>
+    </main>
+
+    <!-- Link to Script -->
+    <script src="stumblejack.js"></script>
+</body>
+</html>

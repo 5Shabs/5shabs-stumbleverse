@@ -1,0 +1,166 @@
+/* General Reset */
+body, h1, p, div, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e2f; /* Dark background for a gaming theme */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 10px; /* Reduced padding */
+}
+
+/* User Info and Gem Currency Display */
+.user-info, .gem-currency {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Adjusted spacing */
+    position: absolute;
+    font-size: 1rem; /* Reduced font size */
+    font-weight: bold;
+}
+
+.user-info {
+    top: 10px; /* Adjusted position */
+    left: 10px;
+}
+
+.gem-currency {
+    top: 10px;
+    right: 10px;
+}
+
+.gem-currency img {
+    width: 25px; /* Adjusted size */
+    height: 25px;
+}
+
+/* Main Container */
+.container {
+    background-color: #282846;
+    border-radius: 15px; /* Adjusted radius */
+    padding: 20px; /* Reduced padding */
+    width: 100%;
+    max-width: 500px; /* Adjusted max width */
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Adjusted shadow */
+}
+
+h1 {
+    font-size: 2rem; /* Adjusted font size */
+    margin-bottom: 15px; /* Reduced spacing */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Adjusted gap */
+    color: #ffaa00; /* Bright color for the title */
+}
+
+p {
+    margin-bottom: 15px; /* Reduced spacing */
+    font-size: 1rem; /* Reduced font size */
+}
+
+/* Timer and Gems Display */
+#timer, #gemDisplay {
+    font-size: 1rem; /* Adjusted font size */
+    font-weight: bold;
+    margin-bottom: 12px; /* Reduced margin */
+}
+
+/* Maze Board */
+.maze-board {
+    display: grid;
+    grid-template-columns: repeat(12, 20px); /* Smaller cells for proper scaling */
+    gap: 3px; /* Adjusted spacing between cells */
+    justify-content: center;
+    margin: 15px auto; /* Reduced margin */
+}
+
+.cell {
+    width: 20px; /* Adjusted size */
+    height: 20px; /* Adjusted size */
+    background-color: #383867; /* Default cell color */
+    border-radius: 3px; /* Adjusted radius */
+    box-shadow: 0 1.5px 3px rgba(0, 0, 0, 0.5); /* Adjusted shadow */
+}
+
+.wall {
+    background-color: #ff0000; /* Red walls */
+}
+
+.player {
+    background-color: transparent; /* Add player image dynamically */
+    border: 1px solid #ffffff; /* Adjusted border size */
+}
+
+.exit {
+    background-color: #ffaa00; /* Bright exit point */
+    border: 1.5px dashed #ffffff; /* Adjusted border size */
+}
+
+/* Buttons */
+button {
+    padding: 8px 16px; /* Reduced padding */
+    font-size: 0.9rem; /* Adjusted font size */
+    border: none;
+    border-radius: 4px; /* Adjusted radius */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #ffaa00; /* Bright yellow button */
+    color: #000000;
+    margin-top: 15px; /* Reduced margin */
+}
+
+button:hover {
+    background-color: #ffcc33; /* Lighter shade on hover */
+}
+
+button:disabled {
+    background-color: #555555; /* Disabled button color */
+    cursor: not-allowed;
+}
+
+/* Return to Activities */
+.return-activities {
+    margin-top: 15px; /* Reduced margin */
+}
+
+.return-activities a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem; /* Adjusted font size */
+    padding: 8px 16px; /* Adjusted padding */
+    background-color: #ffaa00;
+    border: 1px solid #ffffff;
+    border-radius: 6px; /* Adjusted radius */
+    transition: all 0.3s ease;
+}
+
+.return-activities a:hover {
+    background-color: #ffcc33;
+    color: #282846; /* Dark text on hover */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .maze-board {
+        grid-template-columns: repeat(12, 15px); /* Even smaller maze for smaller screens */
+    }
+
+    .cell {
+        width: 15px;
+        height: 15px;
+    }
+}

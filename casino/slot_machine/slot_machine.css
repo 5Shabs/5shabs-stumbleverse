@@ -1,0 +1,196 @@
+/* General Reset */
+body, h1, p, div, a, button, input {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e2f; /* A dark casino-like background */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* User Info and Gem Currency */
+.user-info, .gem-currency {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.user-info {
+    top: 20px;
+    left: 20px;
+}
+
+.gem-currency {
+    top: 20px;
+    right: 20px;
+}
+
+.gem-currency img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Main Container */
+.container {
+    background-color: #282846;
+    border-radius: 20px;
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+/* Betting Section */
+.bet-section {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.bet-section label {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.bet-section input {
+    width: 60px;
+    padding: 5px;
+    text-align: center;
+    font-size: 1rem;
+    border: 2px solid #ffaa00;
+    border-radius: 5px;
+    background-color: #383867;
+    color: #ffffff;
+}
+
+.bet-section button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    background-color: #ffaa00;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.bet-section button:hover {
+    background-color: #ffcc33;
+}
+
+/* Slot Reels */
+.slot-reels {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.reel {
+    width: 80px;
+    height: 80px;
+    background-color: #ffaa00;
+    color: #000000;
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    animation: spin 1s ease-in-out;
+}
+
+/* Results Section */
+.results {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.results p {
+    margin-bottom: 5px;
+}
+
+/* Buttons Section */
+.button-section {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#spinButton {
+    background-color: #00ff00; /* Green for Spin */
+    color: #000000;
+}
+
+#spinButton:disabled {
+    background-color: #555555; /* Disabled Gray */
+    cursor: not-allowed;
+}
+
+#autospinButton {
+    background-color: #ff0000; /* Red for Autospin */
+    color: #ffffff;
+}
+
+button:hover:not(:disabled) {
+    opacity: 0.9;
+}
+
+/* Return to Casino */
+.return-casino {
+    margin-top: 15px;
+}
+
+.return-casino a {
+    color: #ffaa00;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.return-casino a:hover {
+    color: #ffcc33;
+}
+
+/* Keyframes for Reel Animation */
+@keyframes spin {
+    0% { transform: rotateX(0); }
+    50% { transform: rotateX(360deg); }
+    100% { transform: rotateX(0); }
+}
